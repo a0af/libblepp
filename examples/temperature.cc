@@ -74,7 +74,7 @@ int main(int argc, char **argv)
 	std::function<void()> found_services_and_characteristics_cb = [&gatt, &notify_cb](){
 		for(auto& service: gatt.primary_services)
 			for(auto& characteristic: service.characteristics)
-				if(characteristic.uuid == UUID("2a1c"))
+				if(characteristic.uuid == UUID("1028"))
 				{
 					characteristic.cb_notify_or_indicate = notify_cb;
 					characteristic.set_notify_and_indicate(true, false);
